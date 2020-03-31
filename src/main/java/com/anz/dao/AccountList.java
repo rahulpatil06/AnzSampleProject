@@ -4,26 +4,26 @@ import java.util.ArrayList;
 import java.util.List;
 import org.springframework.stereotype.Repository;
 
-import com.anz.model.AccountDetails;
+import com.anz.model.AccountDetailsModel;
 import com.anz.model.TransactionHistory;
 
 @Repository
 public class AccountList {
-	static ArrayList<AccountDetails> list = new ArrayList<AccountDetails>();
+	static ArrayList<AccountDetailsModel> list = new ArrayList<AccountDetailsModel>();
 	static {
-		list.add(new AccountDetails(585309209, "SGSavings726", "Savings", "08/11/2018", "SGD", (float) 84327.50));
-		list.add(new AccountDetails(791066619, "AUSavings933", "Savings", "08/11/2018", "AUD", (float) 84327.50));
-		list.add(new AccountDetails(321143048, "AUCurrent433", "Current", "08/11/2018", "AUD", (float) 84327.50));
-		list.add(new AccountDetails(680168913, "SGCurrent166", "Current", "08/11/2018", "SGD", (float) 84327.50));
-		list.add(new AccountDetails(136056165, "AUCurrent374", "Current", "08/11/2018", "AUD", (float) 84327.50));
-		list.add(new AccountDetails(453963528, "AUSavings938", "Savings", "08/11/2018", "AUD", (float) 84327.50));
-		list.add(new AccountDetails(334666982, "AUSavings938", "Savings", "08/11/2018", "AUD", (float) 84327.50));
-		list.add(new AccountDetails(793949180, "SGSavings253", "Savings", "08/11/2018", "SGD", (float) 84327.50));
-		list.add(new AccountDetails(768759901, "AUCurrent754", "Current", "08/11/2018", "AUD", (float) 84327.50));
-		list.add(new AccountDetails(847257972, "SGCurrent294", "Current", "08/11/2018", "SGD", (float) 84327.50));
+		list.add(new AccountDetailsModel(585309209, "SGSavings726", "Savings", "08/11/2018", "SGD", (float) 84327.50));
+		list.add(new AccountDetailsModel(791066619, "AUSavings933", "Savings", "08/11/2018", "AUD", (float) 84327.50));
+		list.add(new AccountDetailsModel(321143048, "AUCurrent433", "Current", "08/11/2018", "AUD", (float) 84327.50));
+		list.add(new AccountDetailsModel(680168913, "SGCurrent166", "Current", "08/11/2018", "SGD", (float) 84327.50));
+		list.add(new AccountDetailsModel(136056165, "AUCurrent374", "Current", "08/11/2018", "AUD", (float) 84327.50));
+		list.add(new AccountDetailsModel(453963528, "AUSavings938", "Savings", "08/11/2018", "AUD", (float) 84327.50));
+		list.add(new AccountDetailsModel(334666982, "AUSavings938", "Savings", "08/11/2018", "AUD", (float) 84327.50));
+		list.add(new AccountDetailsModel(793949180, "SGSavings253", "Savings", "08/11/2018", "SGD", (float) 84327.50));
+		list.add(new AccountDetailsModel(768759901, "AUCurrent754", "Current", "08/11/2018", "AUD", (float) 84327.50));
+		list.add(new AccountDetailsModel(847257972, "SGCurrent294", "Current", "08/11/2018", "SGD", (float) 84327.50));
 	}
 
-	public List<AccountDetails> getAccountDetails() {
+	public List<AccountDetailsModel> getAccountDetails() {
 		return list;
 	}
 

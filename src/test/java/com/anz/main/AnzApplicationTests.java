@@ -10,7 +10,7 @@ import org.mockito.InjectMocks;
 import org.mockito.MockitoAnnotations;
 import org.springframework.boot.test.context.SpringBootTest;
 import com.anz.dao.AccountList;
-import com.anz.model.AccountDetails;
+import com.anz.model.AccountDetailsModel;
 import com.anz.model.TransactionHistory;
 
 
@@ -30,8 +30,8 @@ class AnzApplicationTests {
 
 	@Test
 	public void getAccountDetails() {
-		List<AccountDetails> list = new ArrayList<AccountDetails>();
-		list.add(new AccountDetails(585309209, "SGSavings726", "Savings", "08/11/2018", "SGD", (float) 84327.50));
+		List<AccountDetailsModel> list = new ArrayList<AccountDetailsModel>();
+		list.add(new AccountDetailsModel(585309209, "SGSavings726", "Savings", "08/11/2018", "SGD", (float) 84327.50));
 		assertThat(accList.getAccountDetails().get(0).getAccountName()).isEqualTo(list.get(0).getAccountName());
 	}
 
