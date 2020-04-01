@@ -74,5 +74,32 @@ public class TransactionDetails {
 	public void setNarrative(String narrative) {
 		this.narrative = narrative;
 	}
-	
+	public String getAcc_Name() {
+		return acc_Name;
+	}
+	public void setAcc_Name(String acc_Name) {
+		this.acc_Name = acc_Name;
+	}
+	public String getCurrency() {
+		return Currency;
+	}
+	public void setCurrency(String currency) {
+		Currency = currency;
+	}
+	public TransactionDetails() {
+			
+		}
+	public TransactionDetails(int transactionId, int accountNumber, String value_date, int debitAmount,
+			int creditAmount, String dr_cr, String narrative, String acc_Name, String currency) {
+		super();
+		this.transactionId = transactionId;
+		this.accountNumber = accountNumber;
+		this.value_date = value_date;
+		this.debitAmount = debitAmount;
+		this.creditAmount = creditAmount;
+		this.dr_cr = dr_cr;
+		this.narrative = narrative;
+		this.acc_Name = acc_Name;
+		Currency = currency;
+	}
 }
