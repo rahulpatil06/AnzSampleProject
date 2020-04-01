@@ -17,7 +17,7 @@ public class AccountDetailsRepository {
 	private EntityManager entityManager;
 
 	@SuppressWarnings("unchecked")
-	public List<AccountDetails> getAccountDetais() {
+	public List<AccountDetails> getAccountDetails() {
 		Session currentSession = entityManager.unwrap(Session.class);
 		Query query = currentSession.createQuery("from AccountDetails");
 		List<AccountDetails> list = query.getResultList();

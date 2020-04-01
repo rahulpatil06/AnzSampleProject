@@ -10,24 +10,25 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 import com.anz.model.AccountDetails;
 import com.anz.model.TransactionDetails;
-import com.anz.repository.AccountDetailsRepository;
-import com.anz.repository.TransactionHistoryRepository;
+import com.anz.services.AccountDetailsService;
+import com.anz.services.TransactionHistoryService;
 
 @RestController
 @RequestMapping(path = "/anz")
 public class AnzController {
 
 	@Autowired
-	AccountDetailsRepository accountRepository;
+	AccountDetailsService accountService;
 	@Autowired
-	TransactionHistoryRepository transactionRepository;
+	TransactionHistoryService transactionService;
 
-	/*  Account List
+	/* 
+	 *  AccountDetails List
 	 */
 	@GetMapping(path = "/accountList", produces = "application/json")
 	@ResponseBody
 	public List<AccountDetails> getAccountDetails() {
-		return accountRepository.getAccountDetais();
+		return accountService.getAcountList();
 	}
 
 	/*
@@ -35,6 +36,6 @@ public class AnzController {
 	 */
 	@PostMapping(path = "/transaction/{acc_No}", produces = "application/json")
 	public List<TransactionDetails> getTransactionHistory(@PathVariable("acc_No") int accountNum) {
-		return transactionRepository.getTransactionHistory(accountNum);
+		return transactionService.getTransactionList(accountNum);
 	}
 }
